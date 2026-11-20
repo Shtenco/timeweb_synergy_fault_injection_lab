@@ -1,0 +1,128 @@
+{
+  "study": "two real localhost HTTP replica processes with controlled failures",
+  "limitations": "single host, no external state changes, deterministic fault pattern, no real multi-host network partitions",
+  "python": "3.13.5",
+  "summaries": [
+    {
+      "run": 0,
+      "mode": "no_retry",
+      "requests": 120,
+      "success": 91,
+      "failed": 29,
+      "success_rate": 0.75833,
+      "retry_attempts_extra": 0,
+      "p50_request_ms": 0.606,
+      "p95_request_ms": 35.381,
+      "mean_request_ms": 4.161,
+      "elapsed_s": 0.557,
+      "injected_process_terminations": 3,
+      "injected_first_attempt_faults": "503 for id%10==0; 75ms delayed response for id%10==1",
+      "errors": {
+        "http_503": 11,
+        "timeout": 12,
+        "connection": 6
+      }
+    },
+    {
+      "run": 0,
+      "mode": "retry_failover",
+      "requests": 120,
+      "success": 120,
+      "failed": 0,
+      "success_rate": 1.0,
+      "retry_attempts_extra": 30,
+      "p50_request_ms": 0.553,
+      "p95_request_ms": 36.182,
+      "mean_request_ms": 4.158,
+      "elapsed_s": 0.551,
+      "injected_process_terminations": 3,
+      "injected_first_attempt_faults": "503 for id%10==0; 75ms delayed response for id%10==1",
+      "errors": {
+        "http_503": 11,
+        "timeout": 12,
+        "connection": 7
+      }
+    },
+    {
+      "run": 1,
+      "mode": "no_retry",
+      "requests": 120,
+      "success": 91,
+      "failed": 29,
+      "success_rate": 0.75833,
+      "retry_attempts_extra": 0,
+      "p50_request_ms": 0.527,
+      "p95_request_ms": 35.285,
+      "mean_request_ms": 4.023,
+      "elapsed_s": 0.536,
+      "injected_process_terminations": 3,
+      "injected_first_attempt_faults": "503 for id%10==0; 75ms delayed response for id%10==1",
+      "errors": {
+        "http_503": 11,
+        "timeout": 12,
+        "connection": 6
+      }
+    },
+    {
+      "run": 1,
+      "mode": "retry_failover",
+      "requests": 120,
+      "success": 120,
+      "failed": 0,
+      "success_rate": 1.0,
+      "retry_attempts_extra": 30,
+      "p50_request_ms": 0.551,
+      "p95_request_ms": 36.259,
+      "mean_request_ms": 4.17,
+      "elapsed_s": 0.541,
+      "injected_process_terminations": 3,
+      "injected_first_attempt_faults": "503 for id%10==0; 75ms delayed response for id%10==1",
+      "errors": {
+        "http_503": 11,
+        "timeout": 12,
+        "connection": 7
+      }
+    },
+    {
+      "run": 2,
+      "mode": "no_retry",
+      "requests": 120,
+      "success": 91,
+      "failed": 29,
+      "success_rate": 0.75833,
+      "retry_attempts_extra": 0,
+      "p50_request_ms": 0.533,
+      "p95_request_ms": 35.319,
+      "mean_request_ms": 4.029,
+      "elapsed_s": 0.535,
+      "injected_process_terminations": 3,
+      "injected_first_attempt_faults": "503 for id%10==0; 75ms delayed response for id%10==1",
+      "errors": {
+        "http_503": 11,
+        "timeout": 12,
+        "connection": 6
+      }
+    },
+    {
+      "run": 2,
+      "mode": "retry_failover",
+      "requests": 120,
+      "success": 120,
+      "failed": 0,
+      "success_rate": 1.0,
+      "retry_attempts_extra": 30,
+      "p50_request_ms": 0.527,
+      "p95_request_ms": 36.079,
+      "mean_request_ms": 4.122,
+      "elapsed_s": 0.546,
+      "injected_process_terminations": 3,
+      "injected_first_attempt_faults": "503 for id%10==0; 75ms delayed response for id%10==1",
+      "errors": {
+        "http_503": 11,
+        "timeout": 12,
+        "connection": 7
+      }
+    }
+  ],
+  "all_assertions_passed": true
+}

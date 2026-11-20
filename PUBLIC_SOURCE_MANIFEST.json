@@ -1,0 +1,16 @@
+{
+  "repository": "timeweb_synergy_fault_injection_lab",
+  "public_source_files": 7,
+  "excluded_offline_only": [
+    "results/17_run.log"
+  ],
+  "sha256": {
+    ".gitignore": "d9d3d414f6f84c0ef3d8b09d59f49f6c2c173fab18219c9fa262db2383820cf5",
+    "README.md": "7cf5aae263b1affa3fed535e33e5babb96fc92dfdedace399ccb0179a00ed126",
+    "experiments/fault_injection_lab.py": "0fd0065061ef1c95e100bcd1c1b18332f89a1870d2ffea72b7a2b57caf061bc9",
+    "qa/validate.py": "e3e94b06fdce53b17454682f5ea08d852e034fae50e1da0477bd9f423ad6a15b",
+    "requirements.txt": "8004a972c3d5c274d8c808e8d8afe03b9aca8af8eebf3df4298f114d8008b754",
+    "results/17/fault_injection_requests.csv": "049f9bec33a36901e4a15a2c7d208a77e832fde52535535f1bebf6e7dd45f81b",
+    "results/17/fault_injection_results.json": "34c69102fa10d1efd80eba7963274e341b172e03ef1642252cd82be2f2d13996"
+  }
+}
