@@ -22,6 +22,10 @@ jobs:
           for p in files: py_compile.compile(str(p), doraise=True)
           print('Python modules compiled:',len(files))
           PYCI
+      - name: Run behavioral tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate committed experiment evidence
+        run: python qa/validate.py
       - name: Verify repository minimum documentation
         run: |
           python - <<'PYCI'
